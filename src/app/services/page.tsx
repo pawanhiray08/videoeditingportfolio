@@ -58,7 +58,7 @@ const testimonials = [
     id: 1,
     name: 'John Smith',
     company: 'Tech Innovators Inc.',
-    content: 'Pawan's attention to detail and creative vision transformed our product launch video into something truly spectacular.',
+    content: "Pawan's attention to detail and creative vision transformed our product launch video into something truly spectacular.",
     image: '/testimonials/john.jpg'
   },
   {
