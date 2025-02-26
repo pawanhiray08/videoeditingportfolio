@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion';
+// Note: You need to install framer-motion first by running:
+// npm install framer-motion
+// or
+// yarn add framer-motion
 import Link from 'next/link';
 
 interface Service {
@@ -8,6 +12,14 @@ interface Service {
   features: string[];
   price: string;
   popular?: boolean;
+}
+
+interface Testimonial {
+  id: number;
+  name: string;
+  company: string;
+  content: string;
+  image: string;
 }
 
 const services: Service[] = [
@@ -53,20 +65,20 @@ const services: Service[] = [
   }
 ];
 
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'John Smith',
-    company: 'Tech Innovators Inc.',
+    name: "John Smith",
+    company: "Tech Innovators Inc.",
     content: "Pawan's attention to detail and creative vision transformed our product launch video into something truly spectacular.",
-    image: '/testimonials/john.jpg'
+    image: "/testimonials/john.jpg"
   },
   {
     id: 2,
-    name: 'Sarah Johnson',
-    company: 'Wedding Films Co.',
-    content: 'The way Pawan captured and edited our wedding video exceeded all expectations. Every moment was perfectly preserved.',
-    image: '/testimonials/sarah.jpg'
+    name: "Sarah Johnson",
+    company: "Wedding Films Co.",
+    content: "The way Pawan captured and edited our wedding video exceeded all expectations. Every moment was perfectly preserved.",
+    image: "/testimonials/sarah.jpg"
   }
 ];
 
@@ -88,7 +100,7 @@ export default function Services() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+<div className="grid md:grid-cols-3 gap-8 mb-20" role="list">
           {services.map((service) => (
             <motion.div
               key={service.id}
